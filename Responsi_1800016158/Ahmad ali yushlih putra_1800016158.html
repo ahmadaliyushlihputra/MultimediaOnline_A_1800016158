@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ring Animation and button neon</title>
+	<style>
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: black;
+}
+
+.ring{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 250px;
+	height: 250px;
+	background: transparent;
+	border: 3px solid #3c3c3c;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 250px;
+	font-family: sans-serif;
+	font-size: 20px;
+	color: yellow;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	text-shadow: 0 0 10px yellow;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.ring:before{
+	content: '';
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	width: 100%;
+	height: 100%;
+	border: 3px solid transparent;
+	border-top: 3px solid yellow;
+	border-right: 3px solid yellow;
+	border-radius: 50%;
+	animation: animateCircle 2s linear infinite;
+}
+
+.container{
+	margin-left: 47%;
+	margin-top: 38%;
+	
+}
+
+.container a{
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 20px;
+}
+
+.container #mulai{
+	color: yellow;
+}
+
+.container #mulai:hover{
+	color: black;
+	background:#e5edf1;
+	box-shadow: 0 0 3px #e5edf1,
+				0 0 6px #e5edf1,
+				0 0 12px #e5edf1,
+				0 0 24px #e5edf1,
+				0 0 48px #e5edf1;
+}
+
+span{
+	display: block;
+	position: absolute;
+	top: calc(50% - 2px);
+	left: 50%;
+	width: 50%;
+	height: 4px;
+	background-color: transparent;
+	transform-origin: left;
+	animation: animate 2s linear infinite;
+}
+
+span:before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: yellow;
+	top: -6px;
+	right: -8px;
+	box-shadow: 0 0 20px yellow;
+}
+
+@keyframes animateCircle{
+	0%{
+		transform: rotate(0deg);
+	}100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes animate{
+	0%{
+		transform: rotate(45deg);
+	}100%{
+		transform: rotate(405deg);
+	}
+}
+	</style>
+</head>
+<body>
+
+	<div class="ring">
+		Stexz
+		<span></span>
+	</div>
+	<div class="container">
+		<a href="index.html" id="mulai">Mulai</a>
+	</div>
+
+
+</body>
+</html>
